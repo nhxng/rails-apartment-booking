@@ -17,6 +17,9 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 
+# Datepicker
+gem 'bootstrap-datepicker-rails'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

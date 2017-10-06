@@ -1,0 +1,19 @@
+.card {
+  background-image: cover;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid gray;
+  height: 130px;
+  position: relative;
+  p {
+    margin: 2px;
+    font-size: 13px;
+  }
+  .apartment-link {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
