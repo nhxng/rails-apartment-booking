@@ -1,5 +1,6 @@
 $(function() {
-  $('.datepicker').datepicker({
-      clearBtn: true,
+  $('.input-daterange').datepicker({
+    format: "dd/mm/yy",
+    startDate: "now"
   });
 });
