@@ -1,4 +1,9 @@
 <div class="container-show">
+  <div class="error-message">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+  </div>
   <div class="apartment-info">
     <%= render partial: 'shared/card', locals: {
       apt_price: @apartment.price_per_night, apt_title: @apartment.title, apt_type: @apartment.accomodation_type, apt_beds: @apartment.beds, apt_show: apartment_path(@apartment)
@@ -6,6 +11,11 @@
   </div>
   <div class="booking-form">
     <%= render 'bookings/booking_form' %>
+  </div>
+  <div class="booking-list">
+    <% @bookings.each do |booking| %>
+      <p>Start: <%= booking.start_date %>| End: <%= booking.end_date %> |User: <%= booking.user.email %></p>
+    <% end %>
   </div>
 </div>
 

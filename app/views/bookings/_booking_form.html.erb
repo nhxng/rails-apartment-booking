@@ -4,6 +4,7 @@
     <div class="input-group-addon">to</div>
     <%= f.input :end_date, as: :string, label: false , input_html: { class: 'datepicker'} %>
   </div>
+  <%= f.input :apartment_id, as: :hidden, input_html: { value: @apartment.id } %>
   <%= f.submit "Reserve", class: "btn btn-danger" %>
 <% end %>
 

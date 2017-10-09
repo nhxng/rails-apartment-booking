@@ -6,6 +6,7 @@ class ApartmentsController < ApplicationController
 
   def show
     @apartment = Apartment.find(params[:id])
+    @bookings = @apartment.bookings
     @booking = Booking.new
   end
 end
