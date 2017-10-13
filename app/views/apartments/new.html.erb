@@ -1,0 +1,20 @@
+<div class="new-apartment-container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h3>Create new apartment</h3>
+      <%= simple_form_for(@apartment) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :accomodation_type, collection: Apartment::ACCOMODATION_TYPES %>
+        <%= f.input :beds, collection: Apartment::NUMERAL_FILTER %>
+        <%= f.input :bedrooms, collection: Apartment::NUMERAL_FILTER %>
+        <%= f.input :bathrooms, collection: Apartment::NUMERAL_FILTER %>
+        <%= f.input :guests, collection: Apartment::NUMERAL_FILTER %>
+        <%= f.input :equipment %>
+        <%= f.input :city %>
+        <%= f.input :address %>
+        <%= f.input :price_per_night, min: 0 %>
+        <%= f.submit "add apartment", class: "btn btn-danger" %>
+      <% end %>
+    </div>
+  </div>
+</div>

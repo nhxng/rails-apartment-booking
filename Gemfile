@@ -20,6 +20,9 @@ gem 'uglifier'
 # Datepicker
 gem 'bootstrap-datepicker-rails'
 
+# Geocode
+gem "geocoder"
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

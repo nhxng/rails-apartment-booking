@@ -5,14 +5,17 @@
     <% end %>
   </div>
   <div class="apartment-info">
+    <h4>Apartment Info</h4>
     <%= render partial: 'shared/card', locals: {
-      apt_price: @apartment.price_per_night, apt_title: @apartment.title, apt_type: @apartment.accomodation_type, apt_beds: @apartment.beds, apt_show: apartment_path(@apartment)
+      apt_price: @apartment.price_per_night, apt_title: @apartment.title, apt_type: @apartment.accomodation_type, apt_beds: @apartment.beds, apt_address: @apartment.address, apt_show: apartment_path(@apartment)
       } %>
   </div>
   <div class="booking-form">
+    <h4>Date Booking</h4>
     <%= render 'bookings/booking_form' %>
   </div>
   <div class="booking-list">
+    <h4>Reservation List</h4>
     <% @bookings.each do |booking| %>
       <p>Start: <%= booking.start_date %>| End: <%= booking.end_date %> |User: <%= booking.user.email %></p>
     <% end %>
