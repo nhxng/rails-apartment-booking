@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Creating apartments ..."
+Booking.destroy_all
 Apartment.destroy_all
 User.destroy_all
 
@@ -34,10 +35,13 @@ apartmentA = Apartment.new({
   beds: beds_array.sample,
   bedrooms: bedrooms_array.sample,
   guests: guests_array.sample,
+  bathrooms: bathrooms_array.sample,
   equipment: equipment_array.sample,
   city: "Berlin",
   address: "Alexanderstraße 4, 10178 Berlin",
   price_per_night: price_array.sample,
+  latitude: Geocoder.coordinates("Alexanderstraße 4, 10178 Berlin")[0],
+  longitude: Geocoder.coordinates("Alexanderstraße 4, 10178 Berlin")[1]
   })
 apartmentA.user = userA
 apartmentA.save
@@ -48,10 +52,13 @@ apartmentB = Apartment.new({
   beds: beds_array.sample,
   bedrooms: bedrooms_array.sample,
   guests: guests_array.sample,
+  bathrooms: bathrooms_array.sample,
   equipment: equipment_array.sample,
   city: "Berlin",
   address: "Kastanienallee 82, 10435 Berlin",
   price_per_night: price_array.sample,
+  latitude: Geocoder.coordinates("Kastanienallee 82, 10435 Berlin")[0],
+  longitude: Geocoder.coordinates("Kastanienallee 82, 10435 Berlin")[1]
   })
 apartmentB.user = userB
 apartmentB.save
@@ -62,10 +69,13 @@ apartmentC = Apartment.new({
   beds: beds_array.sample,
   bedrooms: bedrooms_array.sample,
   guests: guests_array.sample,
+  bathrooms: bathrooms_array.sample,
   equipment: equipment_array.sample,
   city: "Berlin",
   address: "Hermannstraße 10, 12049 Berlin",
   price_per_night: price_array.sample,
+  latitude: Geocoder.coordinates("Hermannstraße 10, 12049 Berlin")[0],
+  longitude: Geocoder.coordinates("Hermannstraße 10, 12049 Berlin")[1]
   })
 apartmentC.user = userC
 apartmentC.save
@@ -76,10 +86,13 @@ apartmentZ = Apartment.new({
   beds: beds_array.sample,
   bedrooms: bedrooms_array.sample,
   guests: guests_array.sample,
+  bathrooms: bathrooms_array.sample,
   equipment: equipment_array.sample,
   city: "Berlin",
   address: "Max-Beer-Straße 7, 10119 Berlin",
   price_per_night: price_array.sample,
+  latitude: Geocoder.coordinates("Max-Beer-Straße 7, 10119 Berlin")[0],
+  longitude: Geocoder.coordinates("Max-Beer-Straße 7, 10119 Berlin")[1]
   })
 apartmentZ.user = userA
 apartmentZ.save

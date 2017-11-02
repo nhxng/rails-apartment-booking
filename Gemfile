@@ -19,9 +19,17 @@ gem 'uglifier'
 
 # Datepicker
 gem 'bootstrap-datepicker-rails'
-
 # Geocode
 gem "geocoder"
+# Dynamic Google Maps
+gem "coffee-rails"
+gem "gmaps4rails"
+# Inline SVG
+gem 'inline_svg'
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 group :development, :test do
   gem 'pry-byebug'

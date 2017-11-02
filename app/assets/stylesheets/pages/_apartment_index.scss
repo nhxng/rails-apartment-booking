@@ -1,3 +1,9 @@
 .main-container {
   margin: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  .cards {
+    width: 50vw;
+    height: 100vh;
+  }
 }
